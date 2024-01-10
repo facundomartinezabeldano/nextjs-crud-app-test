@@ -1,0 +1,13 @@
+{
+    "tailwindCSS.suggestions": true,
+    "editor.formatOnSave": true,
+    "javascript.format.insertSpaceAfterCommaDelimiter": true,
+    "javascript.format.semicolons": "insert",
+    "javascript.autoClosingTags": true,
+    "javascript.format.enable": true,
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.includeLanguages": {
+        "plaintext": "html",
+        "javascript": "javascriptreact"
+    },
+}

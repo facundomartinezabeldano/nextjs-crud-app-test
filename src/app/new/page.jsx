@@ -2,20 +2,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-function ErrorPrompt({ errors }) {
-  if (errors.length > 0) {
-    return (
-      <div className="bg-red-500 text-white p-4 mb-4 text-center">
-        <ul>
-          {errors.map((error, index) => (
-            <li key={index}>{error}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-}
-
 function NewPage() {
 
   const router = useRouter();
@@ -40,7 +26,6 @@ function NewPage() {
       const errors = [...errors, err];
       setErrors(errors);
     }
-
     router.push("/");
   };
 
@@ -56,7 +41,6 @@ function NewPage() {
         </label>
         <textarea className="border border-grey-400 p-2 mb-4 w-full text-black" name="" id="" cols="30" rows="3" placeholder="Contenido"></textarea>
         <button className="bg-blue-500 hoover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-4 mb-4" >Crear</button>
-        <ErrorPrompt errors={errors} />
       </form>
     </div>
   );
